@@ -1,4 +1,4 @@
-FROM python:3.8-alphine
+FROM python:3.8-alpine
 WORKDIR /code
 ADD source/ source/
 ADD test/ test/
