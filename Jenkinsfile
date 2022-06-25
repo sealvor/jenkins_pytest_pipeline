@@ -8,6 +8,7 @@ pipeline {
         }
         stage ('test') {
             steps {
+                sh 'conda activate jenkins_py'
                 sh 'python -m pytest test/'
             }
         }
