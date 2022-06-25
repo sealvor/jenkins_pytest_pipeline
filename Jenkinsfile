@@ -11,10 +11,5 @@ pipeline {
                 sh '/usr/local/bin/docker run --rm add_image:latest'
             }
         }
-        stage ('exec') {
-            steps {
-                sh '/usr/local/bin/docker exec -it '
-            }
-        }
     }
 }
