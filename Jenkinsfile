@@ -2,10 +2,14 @@ pipeline {
     agent any
     stages {
         stage ('init') {
-            echo init stage
+            steps {
+                echo init stage
+            }
         }
         stage ('test') {
-            sh 'python -m pytest test/'
+            steps {
+                sh 'python -m pytest test/'
+            }
         }
     }
 }
