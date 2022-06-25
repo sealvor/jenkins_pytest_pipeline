@@ -6,10 +6,9 @@ pipeline {
                 echo 'init stage'
             }
         }
-        stage ('test') {
+        stage ('run') {
             steps {
-                sh 'conda activate jenkins_py'
-                sh 'python -m pytest test/'
+                sh 'python main.py'
             }
         }
     }
