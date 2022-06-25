@@ -8,7 +8,7 @@ pipeline {
         }
         stage ('run') {
             steps {
-                sh '/usr/local/bin/docker run -rm add_image:latest'
+                sh '/usr/local/bin/docker run --rm add_image:latest'
             }
         }
         stage ('exec') {
