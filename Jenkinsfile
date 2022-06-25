@@ -1,19 +1,19 @@
 pipeline {
     agent any
     stages {
-        stage ('init') {
+        stage ('build') {
             steps {
-                echo 'init stage'
+                sh 'docker build --tag add_image:latest .'
             }
         }
         stage ('run') {
             steps {
-                sh '/Users/tanhongyu/miniforge3/envs/jenkins_py/bin/python main.py'
+                sh 'docker run -rm add_image:latest'
             }
         }
-        stage ('test') {
+        stage ('exec') {
             steps {
-                sh '/Users/tanhongyu/miniforge3/envs/jenkins_py/bin/python -m pytest test/'
+                sh 'docker exec -it '
             }
         }
     }
