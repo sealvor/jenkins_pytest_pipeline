@@ -8,7 +8,7 @@ pipeline {
         }
         stage ('run') {
             steps {
-                sh 'python main.py'
+                sh '/Users/tanhongyu/miniforge3/envs/jenkins_py/bin/python main.py'
             }
         }
     }
